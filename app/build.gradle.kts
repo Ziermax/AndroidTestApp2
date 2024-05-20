@@ -1,6 +1,14 @@
 plugins {
 	alias(libs.plugins.android.application)
 	alias(libs.plugins.jetbrains.kotlin.android)
+
+	/*	Dagg er Hilt: plugin para el implementation	*/
+	id("kotlin-kapt")
+	id("com.google.dagger.hilt.android")
+
+	/*	Safe Args	*/
+	id("androidx.navigation.safeargs.kotlin")
+
 }
 
 android {
@@ -39,9 +47,17 @@ dependencies {
 
 	val navVersion:String = "2.7.7"
 
-	/*	Navigation Component	*/
+	/*	Navigation Component: Navegacion de fragmentos	*/
 	implementation("androidx.navigation:navigation-fragment:$navVersion")
 	implementation("androidx.navigation:navigation-ui:$navVersion")
+
+	/*	Dagger Hilt: Inyeccion de Dependencias	*/
+	implementation("com.google.dagger:hilt-android:2.48")
+	kapt("com.google.dagger:hilt-android-compiler:2.48")
+
+	/*	Retro Fit	*/
+	implementation("com.squareup.retrofit2:retrofit:2.11.0")
+	implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
 	implementation(libs.androidx.core.ktx)
 	implementation(libs.androidx.appcompat)

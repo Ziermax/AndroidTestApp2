@@ -10,6 +10,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.ziermax.horoscopapp.R
 import com.ziermax.horoscopapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class MainActivity : AppCompatActivity() {
 
