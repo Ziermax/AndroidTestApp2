@@ -6,4 +6,6 @@
 	android:background="@color/primary"
 	tools:context=".ui.palmistry.PalmistryFragment">
 
+
+
 </FrameLayout>

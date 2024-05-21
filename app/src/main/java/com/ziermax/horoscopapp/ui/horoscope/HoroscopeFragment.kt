@@ -43,11 +43,11 @@ class HoroscopeFragment : Fragment() {
 	}
 
 	private fun initUi() {
-		initList()
+		initListeners()
 		initUiState()
 	}
 
-	private fun initList() {
+	private fun initListeners() {
 		horoscopeAdapter = HoroscopeAdapter() { onItemSelected(it) }
 		binding.rvHoroscopeFrag.apply {
 			layoutManager = GridLayoutManager(context, 2)

@@ -45,9 +45,9 @@ android {
 
 dependencies {
 
-	val navVersion:String = "2.7.7"
 
 	/*	Navigation Component: Navegacion de fragmentos	*/
+	val navVersion:String = "2.7.7"
 	implementation("androidx.navigation:navigation-fragment:$navVersion")
 	implementation("androidx.navigation:navigation-ui:$navVersion")
 
@@ -58,6 +58,15 @@ dependencies {
 	/*	Retro Fit	*/
 	implementation("com.squareup.retrofit2:retrofit:2.11.0")
 	implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+	/*	CameraX	*/
+	val camerax_version: String = "1.3.3"
+	implementation ("androidx.camera:camera-core:${camerax_version}")
+	implementation ("androidx.camera:camera-camera2:${camerax_version}")
+	implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
+	implementation ("androidx.camera:camera-video:${camerax_version}")
+	implementation ("androidx.camera:camera-view:${camerax_version}")
+	implementation ("androidx.camera:camera-extensions:${camerax_version}")
 
 	implementation(libs.androidx.core.ktx)
 	implementation(libs.androidx.appcompat)

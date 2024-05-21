@@ -32,8 +32,13 @@ class HoroscopeDetailActivity : AppCompatActivity() {
 		initUI()
 	}
 
+	private fun initListeners() {
+		binding.ivBackButton.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+	}
+
 	private fun initUI() {
-		initUIState()
+		initListeners()
+//		initUIState()
 	}
 
 	private	fun initUIState() {
@@ -55,7 +60,7 @@ class HoroscopeDetailActivity : AppCompatActivity() {
 	}
 
 	private fun errorState() {
-
+		binding.pbHoroscopeDescriptionDetail.isVisible = false
 	}
 
 	private fun successState() {
